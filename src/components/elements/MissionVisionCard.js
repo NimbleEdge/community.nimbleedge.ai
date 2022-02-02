@@ -2,9 +2,9 @@ import styled from "styled-components";
 import ARROW from "../../assets/images/right-arrow.svg";
 
 const CardWrapper = styled.div`
-    width: 15vw;
+    width: 20vw;
     background-color: #FFFFFF;
-    height: 25vh;
+    height: 35vh;
     border: 1px solid #00000005;
     border-radius: 16px;
     padding: 4.5vh 2.5vw;
@@ -36,13 +36,13 @@ const Body = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 60%;
+    height: 90%;
 `;
 
 const Heading = styled.div`
     font-family: Open Sans;
     font-weight: Bold;
-    font-size: 18px;
+    font-size: 1vw;
     letter-spacing: 0.18px;
     color: #000000;
     font-style: normal;
@@ -56,7 +56,7 @@ const Description = styled.div`
     letter-spacing: 0.14px;
     color: #000000;
     text-align: justify;
-    font-size: 14px;
+    font-size: 0.8vw;
     margin-bottom: 1vh;
 `;
 
@@ -65,13 +65,11 @@ const Tags = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     span {
-        font-family: Open Sans;
         font-weight: Bold;
-        font-style: normal;
         letter-spacing: 0px;
         color: #000000;
-        margin-right: 10px;
-        font-size: 12px;
+        margin-right: 0.5vw;
+        font-size: 0.7vw;
     }
 `;
 
@@ -82,15 +80,12 @@ const ReadMore = styled.a`
     text-decoration: none;
     -webkit-transition: background-color 500ms ease-out;
     -ms-transition: background-color 500ms ease-out;
-    
     span {
         text-decoration: none;
-        font-family: Open Sans;
         font-weight: 600;
-        font-style: normal;
         color: #fff;
         letter-spacing: 0px;
-        font-size: 12px;
+        font-size: 0.8vw;
     }
 
     img {
@@ -99,8 +94,8 @@ const ReadMore = styled.a`
     }
 `;
 
-export default function Card({ image, heading, description, tags }) {
-    return <CardWrapper>
+export default function Card({ idx, image, heading, description, tags }) {
+    return <CardWrapper key={idx}>
         <Image src={image} />
         <Body>
             <Heading>{heading}</Heading>

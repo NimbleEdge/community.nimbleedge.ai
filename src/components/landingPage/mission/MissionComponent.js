@@ -7,8 +7,7 @@ import EARTH from "../../../assets/images/lock-earth.svg";
 
 const MissionWrapper = styled.div`
     background-color: #FAFAFA;
-    padding: 0 7vw;
-    height: 60vh;
+    padding: 10vh 7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,8 +36,9 @@ const SubHeading = styled.div`
 `;
 
 const HorizontalBar = styled.div`
-    background-color: #323568;
+    background: #323568 0% 0% no-repeat padding-box;
     border-radius: 2px;
+    opacity: 1;
     width: 4vw;
     height: 4px;
     margin-bottom: 3vh;
@@ -79,7 +79,9 @@ export default function MissionComponent(props) {
         <SubHeading>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s</SubHeading>
         <HorizontalBar />
         <CardWrapper>
-            {example?.map((item) => <Card 
+            {example?.map((item, idx) => <Card
+                key={idx}
+                idx={idx}
                 image={item.image}
                 heading={item.heading}
                 description={item.description}

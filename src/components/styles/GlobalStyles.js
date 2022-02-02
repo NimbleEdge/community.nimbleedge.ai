@@ -1,11 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-    body, html {
+    * {
         scrollbar-width: none;
         -ms-overflow-style: none;
+        font-family: Open Sans;
+        font-style: normal;
+        box-sizing: border-box;
     }
-    body::-webkit-scrollbar {
+    
+    *::-webkit-scrollbar {
         display: none;
     } 
 `;

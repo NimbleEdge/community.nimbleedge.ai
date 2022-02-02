@@ -2,10 +2,10 @@ import styled from "styled-components";
 import INTRO from "../../../assets/images/landing-page.png";
 
 const Image = styled.div`
-    width: 35vw;
+    width: 40vw;
     img {
-        width: 35vw;
-        height: 80vh;
+        width: 40vw;
+        height: 85vh;
     }
 `;
 

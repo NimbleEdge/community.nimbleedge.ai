@@ -3,7 +3,8 @@ import IntroPicture from "./IntroPicture";
 import IntroText from "./IntroText";
 
 const Intro = styled.div`
-    height: 90vh;
+    height: 100vh;
+    width: 100vw;
     padding: 10vh 7vw 0;
     display: flex;
     flex-direction: row;

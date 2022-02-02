@@ -10,9 +10,7 @@ const Intro = styled.div`
 
     div:nth-child(1) {
         letter-spacing: 0.48px;
-        font-family: Open Sans;
-        font-size: 17px;
-        font-style: normal;
+        font-size: 1vw;
         font-weight: 600;
         text-transform: uppercase;
         color: #C93418;
@@ -20,9 +18,7 @@ const Intro = styled.div`
 
     div:nth-child(2) {
         letter-spacing: 2.55px;
-        font-family: Open Sans;
         font-size: 4vw;
-        font-style: normal;
         font-weight: 800;
         color: #000000;
         display: flex;
@@ -33,8 +29,8 @@ const Intro = styled.div`
     div:nth-child(3) {
         border-left: 5px solid #323568;
         border-radius: 4px;
-        font-family: Open Sans;
-        font-size: 14px;
+        font-size: 0.8vw;
+        text-align: justify;
         letter-spacing: 0px;
         color: #000000;
         padding-left: 2vw;
@@ -51,11 +47,9 @@ const Intro = styled.div`
         opacity: 1;
         box-shadow: 0px 6px 10px #00000033;
         color: #FFF;
-        font-family: Open Sans;
         letter-spacing: 0.16px;
-        font-style: normal;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 1vw;
         text-decoration: none;
         text-align: center;
         display: flex;

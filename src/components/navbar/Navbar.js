@@ -5,25 +5,35 @@ import LogoElement from "../elements/Logo";
 import { NavbarButton } from "../elements/NavbarButton";
 
 const Navbar = styled.div`
-    background-color: #FFFFFF;
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    top: 0;
+    width: 100vw;
+    height: 8vh;
     display: flex;
     flex-direction: row;
-    padding: 0 7%;
     align-items: center;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    padding: 0 7vw;
 `;
 
 const Logo = styled.div`
     height: 100%;
-    width: 35%;
+    width: 45%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    padding: 0;
 
+`;
+
+const RightSide = styled.div`
+    flex: 1;
+    float: right;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 `;
 
 const ButtonsWrapper = styled.div`
@@ -33,22 +43,11 @@ const ButtonsWrapper = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-
 `;
 
-const RightSide = styled.div`
-    float: right;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-`;
 
 export default function NavbarComponent(props) {
     const [activebutton, setActiveButton] = useState(0);
-
-    console.log(activebutton);
     return <Navbar>
         <Logo>
             <LogoElement />
