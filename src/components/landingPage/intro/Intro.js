@@ -4,7 +4,7 @@ import IntroText from "./IntroText";
 
 const Intro = styled.div`
     height: 90vh;
-    padding: 10vh 5vw 0;
+    padding: 10vh 7vw 0;
     display: flex;
     flex-direction: row;
     background-color: #FAFAFA;

@@ -12,18 +12,18 @@ const Navbar = styled.div`
     top: 0;
     display: flex;
     flex-direction: row;
-    padding: 0 5%;
+    padding: 0 7%;
     align-items: center;
-    // justify-content: space-evenly;
 `;
 
 const Logo = styled.div`
     height: 100%;
-    width: 40%;
+    width: 35%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+
 `;
 
 const ButtonsWrapper = styled.div`
@@ -33,6 +33,7 @@ const ButtonsWrapper = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+
 `;
 
 const RightSide = styled.div`
@@ -41,6 +42,7 @@ const RightSide = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+
 `;
 
 export default function NavbarComponent(props) {

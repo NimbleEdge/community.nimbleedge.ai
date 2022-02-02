@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import INTRO from "../../assets/images/landing-page.png";
+import INTRO from "../../../assets/images/landing-page.png";
 
 const Image = styled.div`
     width: 35vw;
