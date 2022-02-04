@@ -1,6 +1,6 @@
 <h1 align="center">
     <br>
-    <img src="../src/assets/images/../../../community.nimble.ai/src/assets/images/nimble-edge.png" alt="Moja global logo" height ="auto" width="300"/>
+    <img src="https://github.com/NimbleEdge/community.nimbleedge.ai/blob/main/src/assets/images/nimble-edge.png" alt="Moja global logo" height ="auto" width="300"/>
     <br>
 </h1>
 <div align="center">
