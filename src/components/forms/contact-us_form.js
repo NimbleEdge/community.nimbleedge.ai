@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { gapi } from "gapi-script";
 
 const Container = styled.div`
   width: 40rem;
@@ -60,9 +61,12 @@ const Container = styled.div`
   }
 `;
 export const Form = ({}) => {
+  const handleSubmit = (values) => {
+    //handle form submit here!;
+  };
   return (
     <Container className="flex-row">
-      <form className="flex-column">
+      <form className="flex-column" onSubmit={handleSubmit}>
         <div className="flex-row">
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="Last Name" />

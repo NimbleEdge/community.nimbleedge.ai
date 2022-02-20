@@ -1,5 +1,6 @@
 import { Twitter, LinkedIn } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 import GLOBE from "../../assets/images/globe-nimble-edge.png";
 import NIMBLEEDGE from "../../assets/images/nimbleedge-white-logo.png";
@@ -8,9 +9,10 @@ import FOOTER_BACKGROUND from "../../assets/images/footer-background.svg";
 const Container = styled.div`
   width: 100%;
   height: 92vh;
+  position: relative;
   background: #000;
   padding: 0 10%;
-  z-index: -1;
+  z-index: 10;
   background-image: url(${({ image }) => image});
   background-repeat: no-repeat;
   background-position: bottom;
@@ -19,6 +21,7 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     .footer-logo-wrapper {
+      z-index: 10000;
       width: 40%;
       padding: 10% 0;
       .footer-nimbleedge-globe {
@@ -32,6 +35,7 @@ const Container = styled.div`
         margin-bottom: 5rem;
       }
       .footer-sponser-button {
+        z-index: 100;
         height: 3rem;
         width: 11rem;
         background: #c93418 0% 0% no-repeat padding-box;
@@ -45,6 +49,7 @@ const Container = styled.div`
         letter-spacing: 0.16px;
         cursor: pointer;
         margin-bottom: 2rem;
+        text-decoration: none;
       }
       .footer-flow-us-text {
         color: #fff;
@@ -125,6 +130,9 @@ const Container = styled.div`
         width: 100%;
         a {
           text-decoration: none;
+          :hover {
+            color: #c93418;
+          }
         }
         a:nth-child(1) {
           width: 60%;
@@ -186,6 +194,10 @@ const Container = styled.div`
 `;
 
 export default function Footer() {
+  const handleSponsor = () => {
+    console.log("Hello World");
+  };
+
   return (
     <Container className="flex-column" image={FOOTER_BACKGROUND}>
       <div className="footer-main-container flex-row">
@@ -200,13 +212,22 @@ export default function Footer() {
             src={NIMBLEEDGE}
             alt="logo nimbleedge"
           />
-          <div className="footer-sponser-button flex-row">Sponsor Us</div>
+          <a
+            href="https://forms.gle/rQEzdY9JRW6vb1nJ9"
+            target="_blank"
+            className="footer-sponser-button flex-row"
+          >
+            Sponsor Us
+          </a>
           <div className="footer-flow-us-text">Follow Us:</div>
           <div className="footer-flow-us-icons-wrapper flex-row">
-            <a href="#">
+            <a href="https://twitter.com/NimbleedgeINC" target="_blank">
               <Twitter sx={{ color: "black" }} fontSize="large" />
             </a>
-            <a href="#">
+            <a
+              href="https://www.linkedin.com/company/nimbleedge/"
+              target="_blank"
+            >
               <LinkedIn sx={{ color: "white" }} fontSize="large" />{" "}
             </a>
           </div>
@@ -221,24 +242,26 @@ export default function Footer() {
           </div>
           <div className="footer-link-container-link">
             <div className="footer-company-link footer-company-community flex-row">
-              <Link to={{ pathname: "/" }}>Company</Link>
-              <Link to={{ pathname: "/" }}>Community</Link>
+              <Link to={{ pathname: "" }}>Company</Link>
+              <Link to={{ pathname: "" }}>Community</Link>
             </div>
             <div className="footer-company-link flex-row">
               <Link to={{ pathname: "/about-us" }}>About us</Link>
-              <Link to={{ pathname: "/" }}>Become a Volunteer</Link>
+              <HashLink to="/#volunteer">Become a Volunteer</HashLink>
             </div>
             <div className="footer-company-link flex-row">
-              <Link to={{ pathname: "/" }}>Mission {"&"} Vission</Link>
-              <Link to={{ pathname: "/" }}>Our Project</Link>
+              <HashLink to="/#mission-vission">Mission {"&"} Vission</HashLink>
+              <HashLink to="/#project">Our Project</HashLink>
             </div>
             <div className="footer-company-link flex-row">
               <Link to={{ pathname: "/" }}>Partner with us</Link>
-              <Link to={{ pathname: "/" }}>Blogs</Link>
+              <Link to={{ pathname: "" }}>Blogs</Link>
             </div>
             <div className="footer-company-link flex-row">
-              <Link to={{ pathname: "/" }}>Explore Business</Link>
-              <Link to={{ pathname: "/" }}>Join Us</Link>
+              <a href="https://www.nimbleedge.ai/" target="_blank">
+                Explore Business
+              </a>
+              <HashLink to="/#volunteer">Join Us</HashLink>
             </div>
             <div className="footer-company-link flex-row">
               <Link to={{ pathname: "/contact-us" }}>Contact Us</Link>

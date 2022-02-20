@@ -14,10 +14,10 @@ export default function Home() {
       <Vissions />
       <Projects />
       <Volunteers />
-      <Blogs />
+      {/* <Blogs /> */}
       <JoinUs />
-      <Partners />
-      <Testimonials />
+      {/* <Partners /> */}
+      {/* <Testimonials /> */}
     </>
   );
 }

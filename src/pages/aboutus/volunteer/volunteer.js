@@ -36,7 +36,7 @@ const Container = styled.div`
 
 export default function Volunteer() {
   return (
-    <Container className="flex-column">
+    <Container id="join-us" className="flex-column">
       <div>Want to become a volunteer?</div>
       <div>
         Lorem Ipsum is simply a dummy text of the printing and typesetting

@@ -10,7 +10,7 @@ const Container = styled.div`
   height: 100%;
   width: 100vw;
   background-color: #fafafa;
-  z-index: -1;
+  z-index: 1;
 
   .headers-navbar {
     height: 8vh;
@@ -22,16 +22,18 @@ const Container = styled.div`
     width: 100%;
     height: 92%;
     padding: 2% 10%;
+    position: relative;
+    z-index: 10;
   }
 
   .header-icon-wrapper {
     position: absolute;
     bottom: 4rem;
     right: 4rem;
-    z-index: 10;
+    z-index: 1000;
     cursor: pointer;
 
-    div:nth-child(1) {
+    a:nth-child(1) {
       margin-bottom: 1rem;
     }
 
@@ -50,12 +52,12 @@ export default function Header(props) {
         <HeaderImage />
       </div>
       <div className="flex-column header-icon-wrapper">
-        <div>
+        <a href="https://twitter.com/NimbleedgeINC" target="_blank">
           <img src={TWITTER} alt="twitter-icon" />
-        </div>
-        <div>
+        </a>
+        <a href="https://www.linkedin.com/company/nimbleedge/" target="_blank">
           <img src={LINKEDIN} alt="likedin icon" />
-        </div>
+        </a>
       </div>
     </Container>
   );

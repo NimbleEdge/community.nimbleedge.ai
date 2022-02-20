@@ -76,12 +76,12 @@ export const Card = ({ index, image, heading, description }) => {
         <div className="vission-card-body-header">{heading}</div>
         <div className="vission-card-body-description">{description}</div>
       </div>
-      {focused && (
+      {/* {focused && (
         <a href="/" className="vission-card-footer flex-row">
           <div>Read more</div>
           <ArrowForward className="vission-card-read-more-icon" />
         </a>
-      )}
+      )} */}
     </Container>
   );
 };

@@ -1,19 +1,21 @@
 import { Avatar } from "@mui/material";
+import { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
+  position: relative;
+  z-index: 100;
   width: 22rem;
   height: 17rem;
   border: 1px solid #ffffff1a;
   border-radius: 8px;
   transition: all 500ms ease;
   padding: 2rem;
-
-  :hover {
-    background: #ffffff0d 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 15px #ffffff1a;
-    border: 1px solid #ffffff1a;
-  }
+  cursor: pointer;
+  background: ${({ focused }) =>
+    focused ? "#ffffff0d 0% 0% no-repeat padding-box" : ""};
+  box-shadow: ${({ focused }) => (focused ? "0px 3px 15px #ffffff1a" : "")};
+  border: ${({ focused }) => (focused ? "1px solid #ffffff1a" : "")};
 
   .project-card-heading {
     font-size: 1.3rem;
@@ -28,7 +30,6 @@ const Container = styled.div`
     line-height: 1.5rem;
     letter-spacing: 0.16px;
     color: #fff;
-    text-align: justify;
   }
 
   .project-card-contributer {
@@ -47,8 +48,23 @@ const Container = styled.div`
 `;
 
 export const Card = ({ projectName, projectDescription, contributorLists }) => {
+  const [focused, setFocused] = useState(false);
+
+  const handleMouseEnter = () => {
+    setFocused(true);
+  };
+
+  const handleMouseExit = () => {
+    setFocused(false);
+  };
+
   return (
-    <Container className="flex-column">
+    <Container
+      className="flex-column"
+      focused={focused}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseExit}
+    >
       <div className="project-card-heading">{projectName}</div>
       <div className="project-card-description">{projectDescription}</div>
       <div className="project-card-contributer flex-row">

@@ -42,18 +42,13 @@ const Container = styled.div`
   }
 `;
 
-export const Card = ({}) => {
+export const Card = ({ name, designation, image }) => {
   return (
-    <Container
-      className="flex-column"
-      image={
-        "https://static01.manyavar.com/uploads/dealimages/11389/listimages/WST0011-339_KSS_7434.webp"
-      }
-    >
+    <Container className="flex-column" image={image}>
       <div className="aboutus-team-placeholder-for-glass"></div>
       <div className="aboutus-team-member-details">
-        <div>Ayush Banshal</div>
-        <div>CTO {"&"} Founder</div>
+        <div>{name}</div>
+        <div>{designation}</div>
       </div>
     </Container>
   );

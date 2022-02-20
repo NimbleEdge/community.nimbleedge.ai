@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import BACKGROUND from "../../../assets/images/join-us-background.png";
 
 const Container = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   padding: 0 10%;
-  background-color: #f9e0e0;
+  background-image: url(${({ image }) => image});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   align-items: center;
   justify-content: center;
   div:nth-child(1) {
@@ -19,12 +23,15 @@ const Container = styled.div`
     margin-bottom: 2.5rem;
   }
   div:nth-child(3) {
-    button {
+    a {
       width: 10rem;
       height: 3rem;
       cursor: pointer;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
     }
-    button:nth-child(1) {
+    a:nth-child(1) {
       margin-right: 4rem;
       background: #c93418 0% 0% no-repeat padding-box;
       box-shadow: 0px 6px 10px #00000033;
@@ -35,7 +42,7 @@ const Container = styled.div`
       font-size: 1rem;
       font-weight: 600;
     }
-    button:nth-child(2) {
+    a:nth-child(2) {
       background: #ffffff 0% 0% no-repeat padding-box;
       box-shadow: 0px 6px 10px #00000033;
       border: 1px solid #c93418;
@@ -47,7 +54,7 @@ const Container = styled.div`
 `;
 export default function Volunteer() {
   return (
-    <Container id="volunteer" className="flex-column">
+    <Container id="volunteer" className="flex-column" image={BACKGROUND}>
       <div>Start Contributing</div>
       <div>
         Join us in working towards privacy-preserving decentralized Edge
@@ -55,8 +62,14 @@ export default function Volunteer() {
         ever leaving your devices.
       </div>
       <div className="flex-row">
-        <button>Join Now</button>
-        <button>Write for us</button>
+        <a
+          href="https://nimbleedge.ai/discord"
+          target="_blank"
+          className="flex-row"
+        >
+          Join Now
+        </a>
+        <a className="flex-row">Write for us</a>
       </div>
     </Container>
   );

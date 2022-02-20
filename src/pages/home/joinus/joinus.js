@@ -8,8 +8,8 @@ import PATH from "../../../assets/images/joinus-path.png";
 
 const Container = styled.div`
   width: 100%;
-  height: 65vh;
-  padding: 0 10%;
+  height: 100%;
+  padding: 3% 10%;
   align-items: center;
   justify-content: center;
   background-image: url(${({ imagePath }) => imagePath});

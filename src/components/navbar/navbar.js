@@ -1,9 +1,11 @@
+import React from "react";
 import styled from "styled-components";
 import { NavbarButton } from "../Elements/NavbarButton";
-import NIMBLEEDGE from "../../assets/images/nimble-edge.png";
 import { useState } from "react";
 import Github from "../Elements/GithubLogo";
 import { Link, useLocation } from "react-router-dom";
+import { NimbleEdgeIcon } from "../Elements/nimbleedgeIcon";
+// import NimbleEdgeIcon from "../../assets/images/nimbleedge.svg";
 
 const Container = styled.div`
   position: fixed;
@@ -31,8 +33,11 @@ const Container = styled.div`
 
     .navbar-logo {
       width: 40%;
-      img {
+      svg {
         width: 15rem;
+        height: 8rem;
+        height: 
+        border: 1px solid red;
       }
     }
 
@@ -57,7 +62,7 @@ const Navbar = () => {
       <div className="navbar-actual-content flex-row">
         <div className="flex-row navbar-logo">
           <Link to={{ pathname: "/" }}>
-            <img src={NIMBLEEDGE} alt="nimble edge" />
+            <NimbleEdgeIcon />
           </Link>
         </div>
         <div className="flex-row navbar-buttons-container">
@@ -87,9 +92,9 @@ const Navbar = () => {
             <NavbarButton
               id={5}
               active={pathname === "/start-a-club"}
-              buttonText={"Start a Club"}
+              buttonText={"Contact Us"}
               setActive={setActiveButton}
-              href="start-a-club"
+              href="/contact-us"
             />
           </div>
           <Github />

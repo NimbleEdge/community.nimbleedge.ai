@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import EDGE_BACKGROUND from "../../../assets/images/edge-background.png";
 
 const Container = styled.div`
   flex-shrink: 0;
@@ -20,6 +21,11 @@ const Container = styled.div`
     font-weight: 800;
     color: #000000;
     margin-bottom: 2rem;
+    span {
+      background-image: url(${({ image }) => image});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   div:nth-child(3) {
@@ -53,15 +59,21 @@ const Container = styled.div`
 
 export default function HeaderText(props) {
   return (
-    <Container className="flex-column">
+    <Container className="flex-column" image={EDGE_BACKGROUND}>
       <div>CONNECT, NETWORK AND GROW</div>
-      <div>Join the Revolution Towards The Edge</div>
+      <div>
+        Join the Revolution Towards The <span>Edge</span>
+      </div>
       <div>
         Foreground for the Pioneers to meet, greet, brainstorm ideas, share
         knowledge, get involved with the projects and do more! Be the change,
         and help bring data to Edge.
       </div>
-      <a href="#" className="flex-row">
+      <a
+        href="https://nimbleedge.ai/discord"
+        target="_blank"
+        className="flex-row"
+      >
         Join Us
       </a>
     </Container>

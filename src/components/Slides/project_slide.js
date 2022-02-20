@@ -3,11 +3,12 @@ import { Card } from "../Cards/project_card";
 import DOWNLOAD from "../../assets/images/download.png";
 
 const Container = styled.div`
-  height: 50vh;
+  height: 100%;
   width: 100%;
-  padding: 0 10%;
+  padding: 2% 10%;
   align-items: center;
   justify-content: space-evenly;
+  z-index: 100;
 
   .project-image {
     width: 20rem;

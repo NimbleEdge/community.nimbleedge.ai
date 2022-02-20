@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { HorizontalLine } from "../../../components/horizontalline/horizontalline";
 import { useEffect, useState } from "react";
 import { Slide } from "../../../components/Slides/project_slide";
-import LAPTOP1 from "../../../assets/images/laptop2.png";
-import MOBILE from "../../../assets/images/mobile.png";
-import LAPTOP from "../../../assets/images/project-laptop.png";
+import LAPTOP1 from "../../../assets/images/laptop2.svg";
+import MOBILE from "../../../assets/images/mobile.svg";
+import LAPTOP from "../../../assets/images/project-laptop.svg";
 
 const Container = styled.div`
   position: relative;
-  z-index: -1;
+  z-index: 100;
   background: transparent
     linear-gradient(308deg, #45108a 2%, #3d065f 29%, #12054e 100%, #10054d 100%)
     0% 0% no-repeat padding-box;
@@ -73,6 +73,13 @@ const SlideData = [
       "https://avatars.githubusercontent.com/u/22546448?v=4",
       "https://avatars.githubusercontent.com/u/36106177?v=4",
       "https://avatars.githubusercontent.com/u/53843818?v=4",
+      "https://avatars.githubusercontent.com/u/16060070?s=60&v=4",
+      "https://avatars.githubusercontent.com/u/56366274?s=60&v=4",
+      "https://avatars.githubusercontent.com/u/25344287?s=60&v=4",
+      "https://avatars.githubusercontent.com/u/78371148?s=60&v=4",
+      "https://avatars.githubusercontent.com/u/72168180?s=60&v=4",
+      "https://avatars.githubusercontent.com/u/88205739?s=60&v=4",
+      "https://avatars.githubusercontent.com/u/57002384?s=60&v=4",
     ],
     illustrationImage: MOBILE,
   },

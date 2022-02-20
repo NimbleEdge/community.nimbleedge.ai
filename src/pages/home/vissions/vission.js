@@ -10,6 +10,8 @@ const Container = styled.div`
   background-color: #fafafa;
   padding: 10vh 10%;
   align-items: center;
+  positon: relative;
+  z-index: 10;
 
   .vissions-header {
     color: #c93418;
@@ -63,7 +65,7 @@ const Data = [
 
 export default function Vission(props) {
   return (
-    <Container className="flex-column">
+    <Container id="mission-vission" className="flex-column">
       <div className="vissions-header">MISSION {"&"} VISION</div>
       <div className="vissions-subheading">
         <div>Leading the movement towards Edge Computing.</div>

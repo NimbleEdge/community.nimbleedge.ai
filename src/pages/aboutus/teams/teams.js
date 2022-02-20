@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Card } from "../../../components/Cards/team_card";
 import { HorizontalLine } from "../../../components/horizontalline/horizontalline";
+import { data } from "../data";
 
 const Container = styled.div`
   width: 100%;
@@ -37,13 +38,9 @@ export default function Teams() {
       </div>
       <HorizontalLine width="4rem" color="#323568" marginBottom="3rem" />
       <div className="aboutus-team-members-container flex-row">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data?.map((item, idx) => (
+          <Card key={idx} {...item} />
+        ))}
       </div>
     </Container>
   );
