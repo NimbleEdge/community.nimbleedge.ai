@@ -1,8 +1,12 @@
 <h1 align="center">
-    <br>
-    <img src="../src/assets/images/../../../community.nimble.ai/src/assets/images/nimble-edge.png" alt="Moja global logo" height ="auto" width="300"/>
-    <br>
-</h1>
+
+  <br>
+  <img src="./assets/Black_logo.png#gh-light-mode-only" alt="RecoEdge"/ height="140" width="500">
+  <img src="./assets/White_logo.png#gh-dark-mode-only" alt="RecoEdge"/ height="140" width="500">
+  <br>
+  Bringing Recommendations to the Edge
+  <br>
+    
 <div align="center">
     <p>
     Repository for the Nimbeedge community website.
