@@ -96,20 +96,36 @@ const Container = styled.div`
     }
   }
 `;
+
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
+
 export const Form = ({}) => {
   const [error, setError] = useState("");
+  const [formData, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    emailId: "",
+    contact: "",
+    concern: "",
+  });
 
-  const handleOnChange = () => {
+  const handleOnChange = (e) => {
     setError("");
+    setForm({...formData, [e.target.name]: e.target.value});
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const firstName = event.target[0].value;
-    const secondName = event.target[1].value;
-    const emailId = event.target[2].value;
-    const phoneNumber = event.target[3].value;
-    const concern = event.target[4].value;
+    const firstName = event.target[1].value;
+    const secondName = event.target[2].value;
+    const emailId = event.target[3].value;
+    const phoneNumber = event.target[4].value;
+    const concern = event.target[5].value;
 
     if (isBlank(firstName)) {
       setError("*First Name should not empty.");
@@ -136,11 +152,11 @@ export const Form = ({}) => {
       return;
     }
 
-    const formData = new FormData(event.target);
+    console.log(encode({...formData}))
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: encode({'form-name': "contact", ...formData}),
     })
       .then((res) => console.log("Form submited", res))
       .catch((err) => err);
@@ -151,19 +167,21 @@ export const Form = ({}) => {
         className="flex-column"
         method="post"
         data-netlify="true"
+        name="contact-us"
         onSubmit={handleSubmit}
         onChange={handleOnChange}
         noValidate
       >
+        <input type="hidden" name="form-name" value="contact-us" />
         <div className="split-2">
-          <input type="text" name="firstname" placeholder="First Name" />
-          <input type="text" name="lastname" placeholder="Last Name" />
+          <input type="text" name="firstName" placeholder="First Name" />
+          <input type="text" name="lastName" placeholder="Last Name" />
         </div>
         <div>
-          <input type="email" name="email" placeholder="Email address" />
+          <input type="email" name="emailId" placeholder="Email address" />
         </div>
         <div>
-          <input type="tel" name="contactno." placeholder="Contact number" />
+          <input type="tel" name="phoneNumber" placeholder="Contact number" />
         </div>
         <div>
           <textarea

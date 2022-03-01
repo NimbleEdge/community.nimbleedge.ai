@@ -38,7 +38,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node src/preload.js",
     "lint": "eslint src/",
     "lint-fix": "eslint src/ --fix",
     "test": "react-scripts test",

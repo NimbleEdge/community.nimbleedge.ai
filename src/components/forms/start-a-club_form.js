@@ -65,7 +65,8 @@ const Container = styled.div`
 export const Form = ({}) => {
   return (
     <Container className="flex-row">
-      <form className="flex-column">
+      <form className="flex-column" name="start-a-club">
+        <input type="hidden" name="form-name" value="start-a-club" />
         <div className="split-2">
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="Last Name" />
