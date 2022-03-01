@@ -152,22 +152,23 @@ export const Form = ({}) => {
       return;
     }
 
-    console.log(encode({...formData}))
-    fetch("/", {
-      method: "POST",
+    const contactForm = document.getElementById("contact-form");
+
+    fetch(contactForm.action, {
+      method: contactForm.method,
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({'form-name': "contact", ...formData}),
+      body: encode({"form-name": "contact-us", ...formData}),
     })
       .then((res) => console.log("Form submited", res))
       .catch((err) => err);
   };
+
   return (
     <Container className="flex-row">
       <form
         className="flex-column"
-        method="post"
-        data-netlify="true"
         name="contact-us"
+        data-netify="true"
         onSubmit={handleSubmit}
         onChange={handleOnChange}
         noValidate

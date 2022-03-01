@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/globe-nimble-edge.png" />
-    <link rel="preload" >
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -26,7 +25,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <form name="contact-us" netlify netlify-honeypot="bot-field" hidden>
+    <form id="contact-form" method="post" name="contact-us" netlify data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="text" name="firstName" />
       <input type="text" name="secondName" />
       <input type="email" name="emailId" />
