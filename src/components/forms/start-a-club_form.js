@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 40rem;
-  height: 40rem;
+  width: min(100%, 45rem);
+  padding: 2rem;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 20px #0000000f;
   border-radius: 16px;
+  padding: 4rem;
   align-items: center;
   justify-content: center;
   form {
-    widht: 100%;
+    width: 100%;
     div {
       width: 100%;
       margin-bottom: 3rem;
@@ -25,6 +26,7 @@ const Container = styled.div`
         border-left: none;
         border-right: none;
         border-bottom: 1px solid #00000026;
+        opacity: 0.5;
       }
     }
     div:nth-child(1) {
@@ -46,12 +48,25 @@ const Container = styled.div`
       border-radius: 60px 60px 0px 60px;
     }
   }
+
+  @media screen and (max-width: 949px) {
+    form {
+      > div:nth-child(1) {
+        input {
+          width: 100%;
+        }
+        > input:nth-child(1) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
 `;
 export const Form = ({}) => {
   return (
     <Container className="flex-row">
       <form className="flex-column">
-        <div className="flex-row">
+        <div className="split-2">
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="Last Name" />
         </div>

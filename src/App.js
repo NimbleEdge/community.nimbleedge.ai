@@ -1,11 +1,11 @@
-import { ThemeProvider } from "@mui/material";
-import { theme } from "./themes/theme";
 import Router from "./routes/route";
+import { Provider } from "react-redux";
+import { store } from "./redux/store/store";
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <Provider store={store}>
       <Router />
-    </ThemeProvider>
+    </Provider>
   );
 }

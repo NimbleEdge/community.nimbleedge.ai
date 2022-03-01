@@ -1,12 +1,14 @@
 import { Avatar } from "@mui/material";
 import { useState } from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { getContributors } from "../../utils/getContributors";
 
 const Container = styled.div`
   position: relative;
   z-index: 100;
-  width: 22rem;
-  height: 17rem;
+  width: min(100%, 22rem);
+  height: 16rem;
   border: 1px solid #ffffff1a;
   border-radius: 8px;
   transition: all 500ms ease;
@@ -47,8 +49,10 @@ const Container = styled.div`
   }
 `;
 
-export const Card = ({ projectName, projectDescription, contributorLists }) => {
+export const Card = ({ projectName, projectDescription }) => {
   const [focused, setFocused] = useState(false);
+  const { contributors } = useSelector((state) => state.contributor);
+  const contributorLists = getContributors(contributors, projectName);
 
   const handleMouseEnter = () => {
     setFocused(true);
@@ -71,22 +75,22 @@ export const Card = ({ projectName, projectDescription, contributorLists }) => {
         {contributorLists.length > 0 && (
           <Avatar
             className="project-card-avatar"
-            src={contributorLists[0]}
-            alt="contributer"
+            src={contributorLists[0].avatar}
+            alt={contributorLists[2].username}
           />
         )}
         {contributorLists.length > 1 && (
           <Avatar
             className="project-card-avatar"
-            src={contributorLists[1]}
-            alt="contributer"
+            src={contributorLists[1].avatar}
+            alt={contributorLists[2].username}
           />
         )}
         {contributorLists.length > 2 && (
           <Avatar
             className="project-card-avatar"
-            src={contributorLists[2]}
-            alt="contributer"
+            src={contributorLists[2].avatar}
+            alt={contributorLists[2].username}
           />
         )}
         {contributorLists.length > 3 && (

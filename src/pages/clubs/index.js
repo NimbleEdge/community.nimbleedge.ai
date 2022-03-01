@@ -4,48 +4,37 @@ import BACKGROUND_IMAGE from "../../assets/images/start-a-club-background.svg";
 import { Form } from "../../components/forms/start-a-club_form";
 
 const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  padding: 8vh 0 0;
   background: #fafafa 0% 0% no-repeat padding-box;
-  .start-a-club-main-container {
-    width: 100%;
-    height: 92vh;
-    background-image: url(${({ backgroundImage }) => backgroundImage});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90% 80%;
-    padding: 0 10%;
-    justify-content: space-between;
-
-    .start-a-club-header-container {
-      align-self: center;
-      width: 40%;
-      div:nth-child(1) {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #c93418;
-        letter-spacing: 0.48px;
+  background-image: url(${({ backgroundImage }) => backgroundImage});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  > div:nth-child(1) {
+    padding: 15rem 0;
+    > div:nth-child(1) {
+      flex-basis: 60%;
+      margin-block: auto;
+      h1 {
         margin-bottom: 1rem;
       }
-      div:nth-child(2) {
-        font-size: 3.3rem;
-        font-weight: 800;
-        letter-spacing: 2px;
-        margin-bottom: 2rem;
-      }
-      div:nth-child(3) {
-        flex-shrink: 0;
-        font-size: rem;
+      p {
         width: 70%;
-        text-align: justify;
-        padding: 1rem 2rem;
-        border-left: 4px solid #323568;
-        border-radius: 4px;
       }
     }
-    .start-a-club-form {
-      align-self: center;
+    > div:nth-child(2) {
+      flex-basis: 100%;
+      align-items: flex-end;
+    }
+  }
+  @media screen and (max-width: 949px) {
+    background-position: top;
+    background-size: cover;
+    > div:nth-child(1) {
+      padding: 7rem 0 0;
+      > div:nth-child(2) {
+        padding: 2rem 0;
+        margin: 0;
+      }
     }
   }
 `;
@@ -56,18 +45,18 @@ export default function Club() {
   }, []);
 
   return (
-    <Container backgroundImage={BACKGROUND_IMAGE}>
-      <div className="start-a-club-main-container flex-row">
-        <div className="start-a-club-header-container flex-column">
-          <div>START A CLUB</div>
-          <div>Want to start a club in your college?</div>
-          <div>
+    <Container className="main-container" backgroundImage={BACKGROUND_IMAGE}>
+      <div className="split-2 container">
+        <div>
+          <h3>START A CLUB</h3>
+          <h1>Want to start a club in your college?</h1>
+          <p className="subtopic-description">
             Foreground for the Pioneers to meet, greet, brainstorm ideas, share
             knowledge, get involved with the projects and do more! Be the
             change, and help bring data to Edge.
-          </div>
+          </p>
         </div>
-        <div className="start-a-club-form">
+        <div className="flex-column">
           <Form />
         </div>
       </div>

@@ -9,7 +9,7 @@ const Logo = styled.img`
 
 export default function Github({}) {
   return (
-    <Link href="https://github.com/NimbleEdge">
+    <Link href="https://github.com/NimbleEdge" target="_blank">
       <Logo src={GITHUB} alt="github icon" />
     </Link>
   );

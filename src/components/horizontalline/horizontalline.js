@@ -6,4 +6,5 @@ export const HorizontalLine = styled.div`
   width: ${({ width }) => width};
   height: 4px;
   margin-bottom: ${({ marginBottom }) => marginBottom};
+  margin-top: ${({ marginTop }) => marginTop};
 `;

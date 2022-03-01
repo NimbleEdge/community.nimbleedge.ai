@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 20rem;
+  width: min(100%, 20rem);
   height: 24rem;
   flex-shrink: 0;
-  margin: 2.7rem;
+  margin: 2rem 3rem;
   background-image: url(${({ image }) => image});
   background-repeat: no-repeat;
   background-position: center;
@@ -39,6 +39,9 @@ const Container = styled.div`
       font-size: 0.9rem;
       letter-spacing: 0.14px;
     }
+  }
+  @media screen and (max-width: 949px) {
+    margin: 2rem 0;
   }
 `;
 

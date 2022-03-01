@@ -4,54 +4,37 @@ import ArrowForward from "@mui/icons-material/ArrowForward";
 
 const Container = styled.div`
   background-color: #fff;
-  width: 23rem;
-  height: 23rem;
+  width: min(100%, 23rem);
   border: 1px solid #00000005;
-  border-radius: 16px;
   padding: 2.5rem;
+  border-radius: 16px;
 
-  :hover {
-    box-shadow: 0px 10px 10px #0000000f;
+  div:nth-child(1) {
+    width: 100%;
+    img {
+      background-color: #ebecff;
+      width: 60px;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
   }
 
-  .vission-card-image {
-    background-color: #ebecff;
-    width: 60px;
-    padding: 10px;
-    border-radius: 8px;
+  div:nth-child(2) {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 900;
     margin-bottom: 1rem;
   }
 
-  .vission-card-body {
-    .vission-card-body-header {
-      font-size: 1.2rem;
-      font-weight: 600;
-      letter-spacing: 0.18px;
-      margin-bottom: 5px;
-    }
-
-    .vission-card-body-description {
-      font-size: 1rem;
-      letter-spacing: 0.18px;
-    }
+  div:nth-child(3) {
+    width: 100%;
+    text-align: left;
   }
 
-  .vission-card-footer {
-    align-self: flex-end;
-    margin-top: auto;
-    text-decoration: none;
-    align-items: center;
-
-    div:nth-child(1) {
-      font-size: 0.8rem;
-      margin-right: 5px;
-      color: #000;
-    }
-
-    .vission-card-read-more-icon {
-      width: 1rem;
-      fill: #000;
-    }
+  @media only screen and (max-width: 949px) {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -71,17 +54,11 @@ export const Card = ({ index, image, heading, description }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseExit}
     >
-      <img className="vission-card-image" src={image} alt="card image" />
-      <div className="vission-card-body">
-        <div className="vission-card-body-header">{heading}</div>
-        <div className="vission-card-body-description">{description}</div>
+      <div>
+        <img src={image} alt="image" />
       </div>
-      {/* {focused && (
-        <a href="/" className="vission-card-footer flex-row">
-          <div>Read more</div>
-          <ArrowForward className="vission-card-read-more-icon" />
-        </a>
-      )} */}
+      <div>{heading}</div>
+      <div>{description}</div>
     </Container>
   );
 };

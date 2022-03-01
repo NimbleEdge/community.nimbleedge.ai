@@ -1,0 +1,53 @@
+import styled from "styled-components";
+import { HashLink as Link } from "react-router-hash-link";
+import Github from "../Elements/GithubLogo";
+
+const StyledMenu = styled.nav`
+  position: absolute;
+  top: 8vh;
+  right: 0;
+  box-shadow: -5px 3px 20px var(--black-F);
+  background-color: var(--white);
+  height: 92vh;
+  width: min(75%, 25rem);
+  padding: 2rem;
+  transition: transform 0.4s ease-in-out;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  display: flex;
+  flex-direction: column;
+  a {
+    color: var(--black);
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  div {
+    margin-top: auto;
+    img {
+      width: 10rem;
+    }
+  }
+`;
+
+export const Menu = ({ open, toggle }) => {
+  return (
+    <StyledMenu open={open}>
+      <Link to={"about-us"} onClick={() => toggle(!open)}>
+        About Us
+      </Link>
+      <Link to={"/#project"} onClick={() => toggle(!open)}>
+        Projects
+      </Link>
+      <Link to={"/#volunteer"} onClick={() => toggle(!open)}>
+        Blogs
+      </Link>
+      <Link to={"/contact-us"} onClick={() => toggle(!open)}>
+        Contact Us
+      </Link>
+      <div>
+        <Github />
+      </div>
+    </StyledMenu>
+  );
+};

@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Card } from "../Cards/project_card";
 import DOWNLOAD from "../../assets/images/download.png";
+import { useSelector } from "react-redux";
 
 const Container = styled.div`
   height: 100%;
   width: 100%;
-  padding: 2% 10%;
+  padding: 1rem 5rem;
   align-items: center;
   justify-content: space-evenly;
   z-index: 100;
@@ -19,6 +20,10 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  @media screen and (max-width: 949px) {
+    padding: 1rem 0;
+  }
 `;
 
 export const Slide = ({
@@ -27,10 +32,11 @@ export const Slide = ({
   contributorLists,
   illustrationImage,
 }) => {
+  const { screen } = useSelector((state) => state.screen);
   return (
     <Container className="flex-row" illustrationImage={illustrationImage}>
       <Card {...{ projectName, projectDescription, contributorLists }} />
-      <div className="project-image"></div>
+      {screen === "BIG_SCREEN" && <div className="project-image"></div>}
     </Container>
   );
 };

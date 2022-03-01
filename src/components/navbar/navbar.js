@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { NavbarButton } from "../Elements/NavbarButton";
 import { useState } from "react";
-import Github from "../Elements/GithubLogo";
 import { Link, useLocation } from "react-router-dom";
 import { NimbleEdgeIcon } from "../Elements/nimbleedgeIcon";
+import { useSelector } from "react-redux";
+import { NavbarButtons } from "./navbar_buttons";
+import { Hamburger } from "../hamburger/hamburger";
 // import NimbleEdgeIcon from "../../assets/images/nimbleedge.svg";
 
 const Container = styled.div`
@@ -12,6 +13,7 @@ const Container = styled.div`
   z-index: 1000;
   width: 100%;
   height: 8vh;
+  padding-top: 4px;
 
   .navbar-blur-placeholder {
     position: absolute;
@@ -36,8 +38,6 @@ const Container = styled.div`
       svg {
         width: 15rem;
         height: 8rem;
-        height: 
-        border: 1px solid red;
       }
     }
 
@@ -50,11 +50,22 @@ const Container = styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: 949px) {
+    .navbar-logo {
+      width: 30%;
+      svg {
+        width: 10rem !important;
+        height: 6rem;
+      }
+    }
+  }
 `;
 
 const Navbar = () => {
   const [activeButton, setActiveButton] = useState(0);
   const { pathname } = useLocation();
+  const { screen } = useSelector((state) => state.screen);
 
   return (
     <Container className="flex-row">
@@ -65,40 +76,14 @@ const Navbar = () => {
             <NimbleEdgeIcon />
           </Link>
         </div>
-        <div className="flex-row navbar-buttons-container">
-          <div className="flex-row navbar-buttons">
-            <NavbarButton
-              id={1}
-              active={pathname === "/about-us"}
-              buttonText={"About Us"}
-              setActive={setActiveButton}
-              href="about-us"
-            />
-            <NavbarButton
-              id={2}
-              active={activeButton === 2}
-              buttonText={"Projects"}
-              setActive={setActiveButton}
-              href="/#project"
-            />
-            {/* <NavbarButton id={3} active={activeButton === 3} buttonText={"Blogs"} setActive={setActiveButton} href="#blogs" /> */}
-            <NavbarButton
-              id={4}
-              active={activeButton === 4}
-              buttonText={"Volunteer"}
-              setActive={setActiveButton}
-              href="/#volunteer"
-            />
-            <NavbarButton
-              id={5}
-              active={pathname === "/start-a-club"}
-              buttonText={"Contact Us"}
-              setActive={setActiveButton}
-              href="/contact-us"
-            />
-          </div>
-          <Github />
-        </div>
+        {screen === "BIG_SCREEN" && (
+          <NavbarButtons
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+            pathname={pathname}
+          />
+        )}
+        {screen === "MOBILE" && <Hamburger />}
       </div>
     </Container>
   );
