@@ -1,3 +1,5 @@
+import { phone } from "phone";
+
 export const isBlank = (name) => {
   //Check the name only contains whitespace or empy.
   return !name || /^\s*$/.test(name);
@@ -15,9 +17,6 @@ export const isValidEmailId = (email) => {
 };
 
 export const isValidPhoneNumber = (number) => {
-  if (isBlank(number)) {
-    return false;
-  }
-  const phoneNum = number.replace("/[^d]/g", "");
-  return phoneNum.length > 6 && phoneNum.length < 14;
+  const phoneReg = /^\d{6,14}$/;
+  return number.match(phoneReg);
 };

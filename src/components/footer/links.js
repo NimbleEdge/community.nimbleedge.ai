@@ -1,6 +1,10 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { isValidEmailId } from "../../utils/formValidator";
+import { encode } from "../../utils/encode";
+
 const Container = styled.div`
   flex-basis: 100%;
   margin-block: auto;
@@ -14,7 +18,7 @@ const Container = styled.div`
       color: var(--white);
       margin-bottom: 1rem;
     }
-    > div:nth-child(2) {
+    > form:nth-child(2) {
       align-items: center;
       width: 100%;
       background: #ffffff 0% 0% no-repeat padding-box;
@@ -29,7 +33,7 @@ const Container = styled.div`
         outline: none;
         padding-inline: 2rem;
       }
-      > div:nth-child(2) {
+      button {
         width: 40%;
         height: 3.5rem;
         align-items: center;
@@ -38,6 +42,8 @@ const Container = styled.div`
         color: var(--white);
         font-weight: 500;
         border-radius: 60px 60px 0px 60px;
+        outline: none;
+        border: none;
       }
     }
   }
@@ -71,6 +77,15 @@ const Container = styled.div`
     }
   }
 
+  .newsletter-form-error {
+    height: 2rem;
+    width: 100%;
+    font-size: 0.8rem;
+    color: red;
+    margin-top: 10px;
+    padding-left: 2rem;
+  }
+
   @media screen and (max-width: 949px) {
     margin-top: 2rem;
     > div:nth-child(1) {
@@ -90,15 +105,51 @@ const Container = styled.div`
 `;
 
 export const Links = () => {
+  const [formData, setFormData] = useState({
+    emailId: ""
+  });
+  const [error, setError] = useState("");
+
+  const handleChange = (event) => {
+    setError("");
+    setFormData({...formData, [event.target.name]: event.target.value});
+  }
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const emailId = event.target[1].value;
+
+    if(!isValidEmailId(emailId)) {
+      setError("*Please enter correct email Id.");
+      return;
+    }
+
+    const newsLetterForm = document.getElementById("newsletter-form");
+
+    fetch(newsLetterForm.action, {
+      method: newsLetterForm.method,
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({"form-name": "newsletter", ...formData})
+    })
+    .then(res => {
+      location.reload();
+    })
+    .catch(err => {
+      location.reload();
+    });
+  }
+
   return (
     <Container>
       <div className="flex-column">
         <div className="footer-subrscribe-newsletter-container">
           <div>Subscribe to our newsletter.</div>
-          <div className="flex-row">
-            <input type="email" placeholder="Enter your email Id" />
-            <div className="flex-row">Submit</div>
-          </div>
+          <form name="newsletter" data-netify="true" className="flex-row" noValidate onChange={handleChange} onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="newsletter" />
+            <input type="email" name="emailId" placeholder="Enter your email Id" />
+            <button type="submit" className="flex-row">Submit</button>
+          </form>
+          <div className="newsletter-form-error">{error}</div>
         </div>
         <div className="footer-links-container-link flex-column">
           <div className="footer-company-community flex-row">
@@ -110,7 +161,7 @@ export const Links = () => {
             <HashLink to="/#volunteer">Become a Volunteer</HashLink>
           </div>
           <div className="footer-company-link flex-row">
-            <HashLink to="/#mission-vission">Mission {"&"} Vission</HashLink>
+            <HashLink to="/#mission-vission">Mission {"&"} Vision</HashLink>
             <HashLink to="/#project">Our Project</HashLink>
           </div>
           <div className="footer-company-link flex-row">

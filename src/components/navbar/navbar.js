@@ -13,7 +13,6 @@ const Container = styled.div`
   z-index: 1000;
   width: 100%;
   height: 8vh;
-  padding-top: 4px;
 
   .navbar-blur-placeholder {
     position: absolute;

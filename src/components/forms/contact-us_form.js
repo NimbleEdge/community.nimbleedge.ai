@@ -5,6 +5,7 @@ import {
   isValidEmailId,
   isValidPhoneNumber,
 } from "../../utils/formValidator";
+import { encode } from "../../utils/encode";
 
 const Container = styled.div`
   width: min(100%, 45rem);
@@ -62,6 +63,7 @@ const Container = styled.div`
       opacity: 0.5;
     }
     button {
+      cursor: pointer;
       width: 10rem;
       height: 3rem;
       border: none;
@@ -85,7 +87,7 @@ const Container = styled.div`
   @media screen and (max-width: 949px) {
     padding: 2rem;
     form {
-      > div:nth-child(1) {
+      > div:nth-child(2) {
         input {
           width: 100%;
         }
@@ -96,13 +98,6 @@ const Container = styled.div`
     }
   }
 `;
-
-const encode = (data) => {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
-
 
 export const Form = ({}) => {
   const [error, setError] = useState("");
@@ -128,12 +123,12 @@ export const Form = ({}) => {
     const concern = event.target[5].value;
 
     if (isBlank(firstName)) {
-      setError("*First Name should not empty.");
+      setError("*Please enter correct first name.");
       return;
     }
 
     if (isBlank(secondName)) {
-      setError("*Last Name should not empty.");
+      setError("*Please enter correct last name.");
       return;
     }
 
@@ -143,7 +138,7 @@ export const Form = ({}) => {
     }
 
     if (!isValidPhoneNumber(phoneNumber)) {
-      setError("*Please enter correct contact detail.");
+      setError("*Please enter correct contact number.");
       return;
     }
 
@@ -159,8 +154,12 @@ export const Form = ({}) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({"form-name": "contact-us", ...formData}),
     })
-      .then((res) => console.log("Form submited", res))
-      .catch((err) => err);
+    .then((res) => {
+      location.reload();
+    })
+    .catch((err) => {
+      setError("")
+    });
   };
 
   return (
