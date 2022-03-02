@@ -1,5 +1,3 @@
-import { phone } from "phone";
-
 export const isBlank = (name) => {
   //Check the name only contains whitespace or empy.
   return !name || /^\s*$/.test(name);
