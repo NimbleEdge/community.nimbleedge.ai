@@ -165,7 +165,9 @@ export const Links = () => {
             <HashLink to="/#project">Our Project</HashLink>
           </div>
           <div className="footer-company-link flex-row">
-            <Link to={{ pathname: "/" }}>Partner with us</Link>
+            <a href="https://forms.gle/QgnmAWvQKeq5gbau9" target="_blank">
+              Partner with us
+            </a>
             <Link to={{ pathname: "" }}>Blogs</Link>
           </div>
           <div className="footer-company-link flex-row">

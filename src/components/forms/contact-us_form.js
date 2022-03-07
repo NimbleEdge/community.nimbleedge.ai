@@ -106,7 +106,7 @@ export const Form = ({}) => {
     lastName: "",
     emailId: "",
     contact: "",
-    concern: "",
+    message: "",
   });
 
   const handleOnChange = (e) => {
@@ -120,7 +120,7 @@ export const Form = ({}) => {
     const secondName = event.target[2].value;
     const emailId = event.target[3].value;
     const phoneNumber = event.target[4].value;
-    const concern = event.target[5].value;
+    const message = event.target[5].value;
 
     if (isBlank(firstName)) {
       setError("*Please enter correct first name.");
@@ -142,8 +142,8 @@ export const Form = ({}) => {
       return;
     }
 
-    if (isBlank(concern)) {
-      setError("*Please enter your concern.");
+    if (isBlank(message)) {
+      setError("*Please enter your message.");
       return;
     }
 
@@ -186,8 +186,8 @@ export const Form = ({}) => {
         <div>
           <textarea
             rows="4"
-            name="concern"
-            placeholder="Enter your concern here..."
+            name="message"
+            placeholder="Enter your message here..."
           />
         </div>
         <div className="contact-us-error">{error}</div>
