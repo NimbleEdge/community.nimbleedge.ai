@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setScreen } from "../redux/slices/screen";
 import { getContributors } from "../redux/middlewares/contributors.middleware";
 import { PROJECTS } from "../constants/projects";
-import { useLocation } from "react-router-dom";
 
 export default function Router() {
   const dispatch = useDispatch();

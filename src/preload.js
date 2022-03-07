@@ -16,13 +16,16 @@ links.forEach(link => {
   let fileType = 'script';
 
   if (/\.css$/.test(link)) {
-    fileType = 'style';
+    fileWithPreload = [
+      ...fileWithPreload,
+      `<link rel="stylesheet" href="${link}">`
+    ]
+  } else {
+    fileWithPreload = [
+      ...fileWithPreload,
+      `<link rel="preload" href="${link}" as="${fileType}">`,
+    ];
   }
-
-  fileWithPreload = [
-    ...fileWithPreload,
-    `<link rel="preload" href="${link}" as="${fileType}">`,
-  ];
 });
 
 fileWithPreload = [

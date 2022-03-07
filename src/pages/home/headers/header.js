@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import EDGE from "../../../assets/images/landing-page.png";
+import EDGE from "../../../assets/images/landing-page-min.png";
 import EDGE_BACKGROUND from "../../../assets/images/edge-background.png";
 import LINKEDIN from "../../../assets/images/linkedin.svg";
 import TWITTER from "../../../assets/images/twitter.svg";

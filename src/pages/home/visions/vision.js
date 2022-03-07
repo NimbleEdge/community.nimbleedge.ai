@@ -34,7 +34,7 @@ const Container = styled.div`
   }
 `;
 
-export default function Vission(props) {
+export default function Vision(props) {
   const { screen } = useSelector((state) => state.screen);
   return (
     <Container id="mission-vission" className="main-container">
