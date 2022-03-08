@@ -7,7 +7,7 @@ const CardContainer = styled.div`
   box-shadow: 0px -2px 20px 7px #0000000f;
   border-radius: 8px;
   padding: 2rem;
-  border: 1px solid red;
+  margin: 1rem 2rem 1rem 0;
 
   .testimonials-card-images-container {
     height: 50%;
@@ -48,7 +48,25 @@ const CardContainer = styled.div`
     font-weight: normal;
     letter-spacing: 0.16px;
     color: #000;
-    text-align: justify;
+  }
+
+  @media screen and (max-width: 949px) {
+    width: min(90%, 22rem);
+    margin: 1rem 1rem;
+    .testimonials-card-images-container {
+      padding: 0;
+      height: 40%;
+    }
+    .testimonials-author-name-container {
+      padding: 0 !important;
+      margin: 0;
+      margin-top: 0rem;
+
+      div {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 `;
 
@@ -62,12 +80,8 @@ export const Card = ({
   setActive,
 }) => {
   return (
-    <CardContainer
-      imageSrc={image}
-      onClick={() => setActive(index)}
-      className="flex-column"
-    >
-      <div className="testimonials-card-images-container flex-row">
+    <CardContainer imageSrc={image} onClick={() => setActive(index)} className="flex-column">
+      <div className="testimonials-card-images-container split-2">
         <div className="testimonials-images flex-row"></div>
         <div className="testimonials-author-name-container">
           <div className="testimonials-author-name">{author}</div>

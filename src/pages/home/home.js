@@ -20,9 +20,9 @@ export default function Home() {
       <Visions />
       <Projects />
       <Volunteers />
-      {/* <Blogs /> */}
+      <Blogs />
       <JoinUs />
-      {/* <Testimonials /> */}
+      <Testimonials />
     </>
   );
 }

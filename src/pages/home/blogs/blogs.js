@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TransitionGroup, CSSTransition } from 'react-transition-group'; 
 import { useState } from "react";
 import { useLayoutEffect } from "react";
 import ArrowForward from "@mui/icons-material/ArrowForward";
@@ -6,9 +7,8 @@ import ArrowBack from "@mui/icons-material/ArrowBack";
 import { next, prev, updateCarouselSlides } from "../../../utils/carousel";
 import { Card } from "../../../components/Cards/blog_card";
 import { useEffect } from "react";
-import Slider from "react-slick";
 import {Data} from "../../blogs/data";
-
+import { useRef } from "react";
 const Container = styled.div`
   width: 100%;
   padding: 4rem 0;
@@ -27,7 +27,13 @@ const Container = styled.div`
   .blog-slider-container {
     flex: 1;
     padding-left: 2rem;
-    overflow: hidden;
+    >div:nth-child(1) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .blogs-card-container {
+    display: flex;
   }
 
   .blogs-slider-arrow-container {
@@ -56,6 +62,10 @@ const Container = styled.div`
     button:hover {
       opacity: 1;
     }
+  }
+
+  .blog-slider-slick-container {
+    
   }
 
   @media screen and (max-width: 949px) {
@@ -89,12 +99,13 @@ const Container = styled.div`
 export default function Blogs() {
   const [activeIndex, setActive] = useState(0);
   const handlePrev = () => {
-    prev(activeIndex, example.length, setActive);
+    setActive((activeIndex-1)%Data.length);
   };
 
   const handleNext = () => {
-    next(activeIndex, example.length, setActive);
+    setActive((activeIndex+1)%Data.length)
   };
+
 
   return (
     <Container id="blogs" className="main-container">
@@ -106,22 +117,17 @@ export default function Blogs() {
           </p>
         </div>
         <div className="blog-slider-container flex-column">
-          <div className="flex-row" >
-            {Data.map((item, index) => (
-                <Card 
-                  key={index}
-                  {...item}
-                />
-            ))}
+          <div className="flex-row">
+            {Data.map((item, idx) => <Card key={idx} {...item}/>)}
           </div>
-          <div className="blogs-slider-arrow-container">
-              <button onClick={handlePrev}>
+          {/* <div className="blogs-slider-arrow-container">
+              <button ref={prevRef}>
                 <ArrowBack />
               </button>
-              <button onClick={handleNext}>
+              <button ref={nextRef}>
                 <ArrowForward />
               </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </Container>

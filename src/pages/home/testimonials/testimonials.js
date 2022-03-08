@@ -5,10 +5,7 @@ import { Card } from "../../../components/Cards/testimonial_card";
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { next, prev } from "../../../utils/carousel";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import DIVYANSHU from "../../../assets/images/team/Divyanshu_.jpg";
-import ARAVIND from "../../../assets/images/team/Aravind.jpeg";
+import { TestimonialData } from "./data";
 
 const Container = styled.div`
   background: #fafafa 0% 0% no-repeat padding-box;
@@ -71,19 +68,20 @@ const Container = styled.div`
         padding: 0;
       }
     }
+    .testimonials-slider-container {
+      width: 100%;
+      padding-left: 0;
+    }
+    .testimonials-slider-arrow-container {
+      display: flex;
+      justify-content: center;
+    }
   }
 `;
 
-const setting = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  swipe: false,
-}
-
 export default function Testimonials() {
+  const [active, setActive] = useState(0);
+  console.log(active);
   return (
     <Container className="main-container">
       <div className="container split-2">
@@ -92,16 +90,18 @@ export default function Testimonials() {
           <p className="subtopic-description">Here's what our community have to say about us.</p>
         </div>
         <div className="testimonials-slider-container">
-          <Slider {...setting}>
-            {example.map((item, index) => (
-              <Card key={index} {...item}/>
-            ))}
-          </Slider>
+          <div className="flex-row">
+            <Card {...TestimonialData[active]}/>
+            {TestimonialData.map((item, index) => {
+                if(index === active) return null;
+                return  <Card key={index} {...item}/>;
+              })}
+          </div>
           <div className="testimonials-slider-arrow-container">
-              <button>
+              <button onClick={() => setActive((active-1 + TestimonialData.length)%TestimonialData.length)}>
                 <ArrowBack />
               </button>
-              <button>
+              <button onClick={() => setActive((active+1)%TestimonialData.length)}>
                 <ArrowForward />
               </button>
           </div>
@@ -110,20 +110,3 @@ export default function Testimonials() {
     </Container>
   );
 }
-
-const example = [
-  {
-    testimonial:
-      "This is the place to go if you're interested in AI, Privacy, or Edge Computing in particular. The exposure to tech stacks and support at NimbleEdge is unparalleled. Talking about support, I will always be grateful to Varun, Ramesht, and Ayush for their guidance.",
-    image: DIVYANSHU,
-    author: "Divyanshu",
-    designation: "",
-  },
-  {
-    testimonial:
-      "A great place to be, if you want to learn a lot and interact with a talented team",
-    image: ARAVIND,
-    author: "Aravind",
-    designation: "Software Engineer, ByteDance",
-  }
-];

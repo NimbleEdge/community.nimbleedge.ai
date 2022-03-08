@@ -11,6 +11,7 @@ const Container = styled.div`
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #0000000f;
   border-radius: 8px;
+  margin-bottom: 2rem;
   margin-right: 2rem;
   opacity: ${({ focused }) => (focused ? 1 : 0.5)};
   .blog-card-image {
@@ -132,7 +133,7 @@ export const Card = ({
               />
               <div className="blog-card-footer-author-name">{authorName}</div>
               {focused && (
-                <a href="/blog/our-community-website" className="blogs-card-footer-read-more flex-row">
+                <a href="/blog/community-website" className="blogs-card-footer-read-more flex-row">
                   <div>Read more</div>
                   <ArrowForward className="blogs-card-footer-read-more-icon" />
                 </a>

@@ -32,7 +32,7 @@ export default function Router() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/start-a-club" element={<Club />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/blog" element={<Blogs />} />
+        <Route path="/blog/community-website" element={<Blogs />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
