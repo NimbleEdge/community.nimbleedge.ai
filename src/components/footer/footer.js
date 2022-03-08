@@ -103,11 +103,11 @@ export default function Footer() {
           </div>
           <div className="flex-row">
             <a href="/" target="_blank">
-              Privacy Policy
+              {/* Privacy Policy */}
             </a>
-            <a href="#">Terms {"&"} Conditions</a>
+            <a href="#">{/*Terms {"&"} Conditions*/}</a>
             <a href="/" target="_blank">
-              Cookie Policy
+              {/* Cookie Policy */}
             </a>
           </div>
         </div>
@@ -118,11 +118,11 @@ export default function Footer() {
           </div>
           <div className="flex-row">
             <a href="/" target="_blank">
-              Privacy Policy
+              {/* Privacy Policy */}
             </a>
-            <a href="#">Terms {"&"} Conditions</a>
+            <a href="#">{/*Terms {"&"} Conditions*/}</a>
             <a href="/" target="_blank">
-              Cookie Policy
+              {/* Cookie Policy */}
             </a>
           </div>
           <div className="flex-row">

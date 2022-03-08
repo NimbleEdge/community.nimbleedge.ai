@@ -38,12 +38,16 @@ const Container = styled.div`
         height: 3.5rem;
         align-items: center;
         justify-content: center;
-        background-color: var(--section-subheading);
+        font-size: 1rem;
+        outline: none;
+        border: none;
         color: var(--white);
-        font-weight: 500;
+        font-weight: 600;
+        background: var(--section-subheading) 0% 0% no-repeat padding-box;
         border-radius: 60px 60px 0px 60px;
         outline: none;
         border: none;
+        cursor: pointer;
       }
     }
   }
@@ -161,20 +165,20 @@ export const Links = () => {
             <HashLink to="/#volunteer">Become a Volunteer</HashLink>
           </div>
           <div className="footer-company-link flex-row">
-            <HashLink to="/#mission-vission">Mission {"&"} Vision</HashLink>
+            <HashLink to="/#mission-vision">Mission {"&"} Vision</HashLink>
             <HashLink to="/#project">Our Project</HashLink>
           </div>
           <div className="footer-company-link flex-row">
             <a href="https://forms.gle/QgnmAWvQKeq5gbau9" target="_blank">
               Partner with us
             </a>
-            <Link to={{ pathname: "" }}>Blogs</Link>
+            <HashLink to="/#blogs">Blogs</HashLink>
           </div>
           <div className="footer-company-link flex-row">
-            <a href="https://www.nimbleedge.ai/" target="_blank">
+            <a href="/business">
               Explore Business
             </a>
-            <HashLink to="/#volunteer">Join Us</HashLink>
+            <HashLink to="/discord">Join Us</HashLink>
           </div>
           <div className="footer-company-link flex-row">
             <Link to={{ pathname: "/contact-us" }}>Contact Us</Link>

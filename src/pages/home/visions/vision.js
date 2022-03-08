@@ -1,14 +1,14 @@
 import styled from "styled-components";
 // import Card from "../../Elements/VisionCard";
 import { HorizontalLine } from "../../../components/horizontalline/horizontalline";
-import { Card } from "../../../components/Cards/vission_card";
+import { Card } from "../../../components/Cards/vision_card";
 import { data } from "./data";
 import { useSelector } from "react-redux";
 
 const Container = styled.div`
   background-color: #fafafa;
   z-index: 1;
-  padding: 3rem 0;
+  padding: 5rem 0 3rem;
   div:nth-child(1) {
     align-items: center;
     h3 {
@@ -20,14 +20,14 @@ const Container = styled.div`
     }
   }
 
-  .vission-card-container {
+  .vision-card-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
   @media only screen and (max-width: 949px) {
-    .vission-card-container {
+    .vision-card-container {
       flex-direction: column;
       align-items: center;
     }
@@ -37,7 +37,7 @@ const Container = styled.div`
 export default function Vision(props) {
   const { screen } = useSelector((state) => state.screen);
   return (
-    <Container id="mission-vission" className="main-container">
+    <Container id="mission-vision" className="main-container">
       <div className="split-column container">
         <h3>MISSION {"&"} VISION</h3>
         {screen === "MOBILE" ? (
@@ -59,7 +59,7 @@ export default function Vision(props) {
           marginBottom="2rem"
           marginTop="1rem"
         />
-        <div className="vission-card-container">
+        <div className="vision-card-container">
           {data.map((item, idx) => (
             <Card key={idx} idx={idx} {...item} />
           ))}

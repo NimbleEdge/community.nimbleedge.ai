@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     margin-block: 1rem;
+    h2 {
+        font-weight: 700;
+    }
 `;
 
 const Title = ({

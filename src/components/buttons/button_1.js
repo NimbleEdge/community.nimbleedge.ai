@@ -19,9 +19,9 @@ const Container = styled.a`
   }
 `;
 
-export const Button1 = ({ text, href, ...rest }) => {
+export const Button1 = ({ text, href, target, ...rest }) => {
   return (
-    <Container href={href} className="flex-row" target="_blank">
+    <Container href={href} className="flex-row" target={target ? target : "_blank"}>
       {text}
     </Container>
   );

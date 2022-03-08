@@ -11,6 +11,8 @@ import { setScreen } from "../redux/slices/screen";
 import { getContributors } from "../redux/middlewares/contributors.middleware";
 import { PROJECTS } from "../constants/projects";
 import Blogs from "../pages/blogs";
+import Business from "../pages/business";
+import NotFound from "../pages/404/index";
 
 export default function Router() {
   const dispatch = useDispatch();
@@ -33,8 +35,9 @@ export default function Router() {
         <Route path="/start-a-club" element={<Club />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/blog/community-website" element={<Blogs />} />
+        <Route path="/business" element={<Business />}/>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<Navigate replace to="/" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

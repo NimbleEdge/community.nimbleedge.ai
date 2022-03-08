@@ -39,9 +39,10 @@ export const Menu = ({ open, toggle }) => {
       <Link to={"/#project"} onClick={() => toggle(!open)}>
         Projects
       </Link>
-      <Link to={"/#volunteer"} onClick={() => toggle(!open)}>
-        Blogs
-      </Link>
+      <a href="https://docs.nimbleedge.ai/" target={"_blank"} onClick={() => toggle(!open)}>
+        Docs
+      </a>
+      <Link to="/careers">Careers</Link>
       <Link to={"/contact-us"} onClick={() => toggle(!open)}>
         Contact Us
       </Link>

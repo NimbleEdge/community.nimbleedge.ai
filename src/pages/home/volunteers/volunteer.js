@@ -77,13 +77,13 @@ export default function Volunteer() {
         </p>
         <div className="flex-row">
           <a
-            href="https://nimbleedge.ai/discord"
+            href="/discord"
             target="_blank"
             className="flex-row"
           >
             Join Now
           </a>
-          <a className="flex-row">Write for us</a>
+          <a href="https://forms.gle/jNNTYrMfmqpXpLan7" target="_blank" className="flex-row">Write for us</a>
         </div>
       </div>
     </Container>
