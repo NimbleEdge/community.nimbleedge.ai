@@ -47,6 +47,7 @@ export const NavbarButton = ({
   active,
   setActive,
   href,
+  external,
   ...rest
 }) => {
   const pressHandler = () => {
@@ -74,7 +75,7 @@ export const NavbarButton = ({
         onMouseLeave={mouseExitHandler}
         onClick={pressHandler}
       >
-        <Link to={href}>{buttonText}</Link>
+        {external ?<a href={href} target="_blank">{buttonText}</a> : <Link to={href}>{buttonText}</Link>}
       </Button>
       <Dot active={dotActive} />
     </ButtonWrapper>

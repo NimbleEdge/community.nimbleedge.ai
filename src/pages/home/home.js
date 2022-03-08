@@ -4,6 +4,8 @@ import JoinUs from "./joinus/joinus";
 import Projects from "./projects/projects";
 import Volunteers from "./volunteers/volunteer";
 import Visions from "./visions/vision";
+import Blogs from "./blogs/blogs";
+import Testimonials from "./testimonials/testimonials";
 import { useLocation } from "react-router-dom";
 
 export default function Home() {
@@ -18,7 +20,9 @@ export default function Home() {
       <Visions />
       <Projects />
       <Volunteers />
+      {/* <Blogs /> */}
       <JoinUs />
+      {/* <Testimonials /> */}
     </>
   );
 }

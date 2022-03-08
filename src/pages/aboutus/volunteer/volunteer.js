@@ -42,13 +42,9 @@ export default function Volunteer() {
     <Container id="join-us" className="main-container">
       <div className="container flex-column">
         <h2>Want to become a volunteer?</h2>
-        <p>
-          Lorem Ipsum is simply a dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry’s standard dummy text ever
-          since the 1500s.
-        </p>
+        <p>Fill out this introduction form and join our Discord community. We're a friendly bunch, so announce yourself in the #introduction channel and get started!</p>
         <a
-          href="https://nimbleedge.ai/discord"
+          href="https://forms.gle/jNNTYrMfmqpXpLan7"
           target="_blank"
           className="flex-row"
         >

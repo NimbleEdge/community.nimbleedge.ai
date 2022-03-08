@@ -302,6 +302,11 @@ img {
   margin-inline: auto;
 }
 
+.blog-container {
+  width: min(70%, 80rem);
+  margin-inline: auto;
+}
+
 .split {
   display: flex;
   flex-direction: row;
@@ -398,5 +403,9 @@ img {
 
   .split-2 {
     flex-direction: column;
+  }
+
+  .blog-container {
+    width: 90%;
   }
 }

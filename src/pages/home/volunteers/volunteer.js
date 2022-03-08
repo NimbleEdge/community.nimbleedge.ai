@@ -11,7 +11,7 @@ const Container = styled.div`
     p {
       align-self: center;
       text-align: center;
-      width: 32%;
+      width: 40%;
     }
     div {
       margin-top: 2rem;

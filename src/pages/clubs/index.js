@@ -48,12 +48,10 @@ export default function Club() {
     <Container className="main-container" backgroundImage={BACKGROUND_IMAGE}>
       <div className="split-2 container">
         <div>
-          <h3>START A CLUB</h3>
-          <h1>Want to start a club in your college?</h1>
+          <h3>BE THE SPARK!</h3>
+          <h1>Start a Student Club at your College or University.</h1>
           <p className="subtopic-description">
-            Foreground for the Pioneers to meet, greet, brainstorm ideas, share
-            knowledge, get involved with the projects and do more! Be the
-            change, and help bring data to Edge.
+          Become part of our mission to lead the movement towards Edge Computing. Take the first step toward a better future!
           </p>
         </div>
         <div className="flex-column">

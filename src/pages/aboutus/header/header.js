@@ -50,11 +50,8 @@ export default function Header() {
           And then back to cloud and datacenters. We are already seeing the
           limits of the cloud in privacy, latency, security, climate impact, and
           even costs. Now is the time for decentralization once more. It's time
-          to change!.
+          to change!
         </p>
-        {/* <p>Imagine a social network of devices that can communicate with one another. They may share computing workloads and use the cloud as needed. They are not dumb spectators, but intelligent agents.</p>
-        <p>The world has always been switching between centralization and decentralization. From mainframes to personal computers/smartphones. And then back to cloud and datacenters.</p>
-        <p>We are already seeing the limits of the cloud in privacy, latency, security, climate impact, and even costs. Now is the time for decentralization once more. It's time to change!</p> */}
       </div>
     </Container>
   );

@@ -21,13 +21,20 @@ export const NavbarButtons = ({ activeButton, setActiveButton, pathname }) => {
           setActive={setActiveButton}
           href="/#project"
         />
-        {/* <NavbarButton id={3} active={activeButton === 3} buttonText={"Blogs"} setActive={setActiveButton} href="#blogs" /> */}
+        <NavbarButton 
+          id={3} 
+          active={routePath.hash === "#blogs"} 
+          buttonText={"Blogs"} 
+          setActive={setActiveButton} 
+          href="/#blogs" 
+        />
         <NavbarButton
           id={4}
           active={routePath.hash === "#volunteer"}
-          buttonText={"Volunteer"}
+          buttonText={"Careers"}
           setActive={setActiveButton}
-          href="/#volunteer"
+          href="https://www.nimbleedge.ai/careers"
+          external={true}
         />
         <NavbarButton
           id={5}

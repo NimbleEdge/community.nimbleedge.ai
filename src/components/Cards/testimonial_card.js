@@ -3,12 +3,11 @@ import { useState } from "react";
 
 const CardContainer = styled.div`
   flex-shrink: 0;
-  width: 40rem;
-  height: 20rem;
+  width: min(100%, 40rem);
   box-shadow: 0px -2px 20px 7px #0000000f;
   border-radius: 8px;
-  margin: 0 1.3rem;
   padding: 2rem;
+  border: 1px solid red;
 
   .testimonials-card-images-container {
     height: 50%;

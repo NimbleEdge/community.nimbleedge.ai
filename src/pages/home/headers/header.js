@@ -28,7 +28,7 @@ const Container = styled.div`
     }
   }
   .home-header-subtopic-description {
-    width: 70%;
+    width: 100%;
   }
   .header-icon-wrapper {
     position: absolute;

@@ -47,12 +47,10 @@ export default function ContactUs() {
     <Container className="main-container" backgroundImage={BACKGROUND_IMAGE}>
       <div className="split-2 container">
         <div>
-          <h3>CONTACT US</h3>
-          <h1>Want to know more about us?</h1>
+          <h3>GOT A QUESTION?</h3>
+          <h1>Let's Connect.</h1>
           <p className="subtopic-description">
-            Foreground for the Pioneers to meet, greet, brainstorm ideas, share
-            knowledge, get involved with the projects and do more! Be the
-            change, and help bring data to Edge.
+          We're here to help and answer any questions you may have.
           </p>
         </div>
         <div className="flex-column">

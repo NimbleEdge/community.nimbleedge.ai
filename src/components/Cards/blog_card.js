@@ -6,12 +6,12 @@ import { Transition } from "react-transition-group";
 
 const Container = styled.div`
   flex-shrink: 0;
-  width: 21rem;
+  width: min(100%, 21rem);
   height: 24rem;
-  margin: 0 1.5rem;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #0000000f;
   border-radius: 8px;
+  margin-right: 2rem;
   opacity: ${({ focused }) => (focused ? 1 : 0.5)};
   .blog-card-image {
     display: block;
@@ -26,7 +26,12 @@ const Container = styled.div`
     flex: 1;
     padding: 1.5rem;
   }
-
+  .blog-comming-soon {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+  }
   .blog-card-title {
     font-weight: 600;
     font-size: 1rem;
@@ -61,7 +66,7 @@ const Container = styled.div`
 
     .blog-card-footer-author-name {
       font-size: 0.8rem;
-      margin-left: 1rem;
+      margin-left: 5px;
       flex: 1;
       white-space: nowrap;
       overflow: hidden;
@@ -84,32 +89,20 @@ const Container = styled.div`
   }
 `;
 
-const duration = 300;
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-};
-
-const transitionStyles = {
-  entering: { opacity: 1 },
-  entered: { opacity: 1 },
-  exiting: { opacity: 0 },
-  exited: { opacity: 0 },
-};
-
 export const Card = ({
   style,
-  image,
+  headerImage,
   title,
   description,
-  author,
+  authorName,
+  authorImage,
   activeSlide,
   index,
   setActive,
+  summary,
   isMove,
 }) => {
-  const [focused, setFocused] = useState(false);
+  const [focused, setFocused] = useState(true);
 
   const handleMouseEnter = () => {
     setFocused(true);
@@ -120,40 +113,33 @@ export const Card = ({
   };
 
   return (
-    <Transition in={true}>
-      {(state) => (
-        <Container
+    <Container
           className="flex-column"
-          focused={focused || activeSlide}
+          focused={true}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseExit}
           onClick={() => setActive(index)}
-          style={{
-            ...defaultStyle,
-            ...transitionStyles[state],
-          }}
         >
-          <img className="blog-card-image" src={image} alt="blog image" />
-          <div className="blog-card-details-container flex-column">
+          {authorName && <img className="blog-card-image" src={headerImage} alt="blog image" />}
+          {authorName && <div className="blog-card-details-container flex-column">
             <div className="blog-card-title">{title}</div>
-            <div className="blog-card-description">{description}</div>
+            <div className="blog-card-description">{summary}</div>
             <div className="flex-row blog-card-footer">
               <Avatar
                 className="blog-card-footer-avatar"
-                src="https://avatars.githubusercontent.com/u/48531975?s=400&u=f8a31df71832d0137cd9e88f1610c88bcb784c3b&v=4"
+                src={authorImage}
                 alt="author"
               />
-              <div className="blog-card-footer-author-name">{author}</div>
+              <div className="blog-card-footer-author-name">{authorName}</div>
               {focused && (
-                <a href="/" className="blogs-card-footer-read-more flex-row">
+                <a href="/blog/our-community-website" className="blogs-card-footer-read-more flex-row">
                   <div>Read more</div>
                   <ArrowForward className="blogs-card-footer-read-more-icon" />
                 </a>
               )}
             </div>
-          </div>
+          </div>}
+          {!authorName && <div className="blog-comming-soon flex-row">coming soon</div>}
         </Container>
-      )}
-    </Transition>
   );
 };

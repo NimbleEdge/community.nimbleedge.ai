@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setScreen } from "../redux/slices/screen";
 import { getContributors } from "../redux/middlewares/contributors.middleware";
 import { PROJECTS } from "../constants/projects";
+import Blogs from "../pages/blogs";
 
 export default function Router() {
   const dispatch = useDispatch();
@@ -28,11 +29,12 @@ export default function Router() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/start-a-club" element={<Club />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="*" element={<Navigate replace to="/" />} />}
+        <Route path="/blog" element={<Blogs />} />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
       <Footer />
     </BrowserRouter>
