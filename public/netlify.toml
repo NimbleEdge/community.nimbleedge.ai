@@ -1,0 +1,40 @@
+
+[[redirects]]
+  from = "/discord"
+  to = "https://discord.gg/TgAD7dgX7V"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/careers"
+  to = "/static/files/NimbleEdge-Jobs.pdf"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/jobs"
+  to = "/static/files/NimbleEdge-Jobs.pdf"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/tests/systems-engineer"
+  to = "https://www.autoproctor.co/tests/start-test/e3H5EzxpXH"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/tests/ml-assessment"
+  to = "https://www.autoproctor.co/tests/start-test/uk6ynVRcMa"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/gsoc/projects"
+  to = "https://nimbleedge.notion.site/4afb26d8fb494f23a33506c5a7c60766?v=190aed20736b417e9b1d0bd71a95f393"
+  status = 301
