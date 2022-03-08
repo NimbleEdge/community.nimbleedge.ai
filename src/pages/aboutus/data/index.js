@@ -23,53 +23,48 @@ export const data = [
     image: AYUSH,
   },
   {
-    name: "Ramesht",
-    designation: "Team Member",
-    image: RAMESHT,
-  },
-  {
-    name: "Yash Vardhan",
-    designation: "Team Member",
-    image: YASH,
-  },
-  {
-    name: "Ahamed",
-    designation: "Team Member",
-    image: AHAMED,
-  },
-  {
     name: "Rishab",
-    designation: "Team Member",
+    designation: "Operations Manager",
     image: RISHAB,
   },
   {
-    name: "Anubhav",
-    designation: "Team Member",
-    image: ANUBHAV,
-  },
-  {
-    name: "Divyanshu",
-    designation: "Team Member",
-    image: DIVYANSHU,
-  },
-  {
-    name: "Shaistha",
-    designation: "Team Member",
-    image: SHAISTHA,
+    name: "Ramesht",
+    designation: "Hacker",
+    image: RAMESHT,
   },
   {
     name: "Sourav",
-    designation: "Team Member",
+    designation: "Community Manager",
     image: SOURAV,
   },
   {
-    name: "Sameer",
-    designation: "Team Member",
-    image: SAMEER,
+    name: "Ahamed",
+    designation: "Infrastructure and DevOps",
+    image: AHAMED,
+  },
+  {
+    name: "Shaistha",
+    designation: "Content Writer",
+    image: SHAISTHA,
   },
   {
     name: "Adarsh",
-    designation: "Team Member",
+    designation: "Product Designer",
     image: ADARSH,
+  },
+  {
+    name: "Yash Vardhan",
+    designation: "Contributor",
+    image: YASH,
+  },
+  {
+    name: "Anubhav",
+    designation: "Contributor",
+    image: ANUBHAV,
+  },
+  {
+    name: "Sameer",
+    designation: "Contributor",
+    image: SAMEER,
   },
 ];
