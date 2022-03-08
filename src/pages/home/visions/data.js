@@ -10,7 +10,7 @@ export const data = [
   },
   {
     image: CLOUD,
-    heading: "Distributed Edge Computating",
+    heading: "Distributed Edge Computing",
     description:
       "Helps us minimize the need for remote data centers by bringing computation and data storage closer, improving latency and bandwidth. Thus, providing faster computation.",
   },
