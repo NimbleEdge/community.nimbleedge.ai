@@ -1,4 +1,3 @@
-
 [[redirects]]
   from = "/discord"
   to = "https://discord.gg/TgAD7dgX7V"
@@ -37,4 +36,5 @@
 [[redirects]]
   from = "/gsoc/projects"
   to = "https://nimbleedge.notion.site/4afb26d8fb494f23a33506c5a7c60766?v=190aed20736b417e9b1d0bd71a95f393"
-  status = 301
+  status = 200
+  force = true
