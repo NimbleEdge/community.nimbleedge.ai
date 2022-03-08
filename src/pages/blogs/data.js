@@ -14,8 +14,5 @@ export const Data = [
     },
     {
 
-    },
-    {
-
     }
 ]
