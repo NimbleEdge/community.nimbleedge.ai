@@ -96,7 +96,7 @@ export default function Footer() {
       {screen === "BIG_SCREEN" ? (
         <div className="footer-agreement-container-big-screen flex-row">
           <div className="flex-row">
-            <span>&copy;</span>2021 Nimbleedge Pvt. Ltd. All rights reserved
+            <span>&copy;</span>2021 Nimbleedge Inc. All rights reserved
           </div>
           <div className="flex-row">
             With love by NimbleEdge Community <span>&#10084;</span>
@@ -126,7 +126,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex-row">
-            <span>&copy;</span>2021 Nimbleedge Pvt. Ltd. All rights reserved
+            <span>&copy;</span>2021 Nimbleedge Inc. All rights reserved
           </div>
         </div>
       )}
