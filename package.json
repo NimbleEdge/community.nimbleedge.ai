@@ -44,7 +44,7 @@
   "scripts": {
     "start": "react-scripts start",
     "serve": "webpack serve --mode development",
-    "build": "react-scripts build && node src/preload.js",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build && node src/preload.js",
     "lint": "eslint src/",
     "lint-fix": "eslint src/ --fix",
     "test": "react-scripts test",
