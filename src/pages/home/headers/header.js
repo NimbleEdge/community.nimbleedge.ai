@@ -68,7 +68,7 @@ const Header = () => {
             knowledge, get involved with the projects and do more! Be the
             change, and help bring data to Edge.
           </p>
-          <Button1 text={"Join Us"} href={"/discord"} />
+          <Button1 text={"Join us"} href={"/discord"} />
         </div>
         <div className="home-header-image">
           <img src={EDGE} alt="edge image" />

@@ -34,7 +34,7 @@ export const Menu = ({ open, toggle }) => {
   return (
     <StyledMenu open={open}>
       <Link to={"about-us"} onClick={() => toggle(!open)}>
-        About Us
+        About us
       </Link>
       <Link to={"/#project"} onClick={() => toggle(!open)}>
         Projects
@@ -42,13 +42,13 @@ export const Menu = ({ open, toggle }) => {
       <a href="https://docs.nimbleedge.ai/" target={"_blank"} onClick={() => toggle(!open)}>
         Docs
       </a>
-      <Link to="/careers">Careers</Link>
+      <a href="/careers" target={"_blank"} onClick={() => toggle(!open)}>
+        Career
+      </a>
       <Link to={"/contact-us"} onClick={() => toggle(!open)}>
-        Contact Us
+        Contact us
       </Link>
-      <div>
         <Github />
-      </div>
     </StyledMenu>
   );
 };

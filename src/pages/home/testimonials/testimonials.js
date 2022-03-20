@@ -92,10 +92,7 @@ export default function Testimonials() {
         <div className="testimonials-slider-container">
           <div className="flex-row">
             <Card {...TestimonialData[active]}/>
-            {TestimonialData.map((item, index) => {
-                if(index === active) return null;
-                return  <Card key={index} {...item}/>;
-              })}
+            <Card {...TestimonialData[(active+1)%TestimonialData.length]}/>
           </div>
           <div className="testimonials-slider-arrow-container">
               <button onClick={() => setActive((active-1 + TestimonialData.length)%TestimonialData.length)}>

@@ -307,6 +307,10 @@ img {
   margin-inline: auto;
 }
 
+.testimonials-slider-container {
+  white-space: pre-line;
+}
+
 .split {
   display: flex;
   flex-direction: row;

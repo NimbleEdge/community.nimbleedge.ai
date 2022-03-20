@@ -166,7 +166,7 @@ export const Links = () => {
           </div>
           <div className="footer-company-link flex-row">
             <HashLink to="/#mission-vision">Mission {"&"} Vision</HashLink>
-            <HashLink to="/#project">Our Project</HashLink>
+            <HashLink to="/#project">Our Projects</HashLink>
           </div>
           <div className="footer-company-link flex-row">
             <a href="https://forms.gle/QgnmAWvQKeq5gbau9" target="_blank">
@@ -178,10 +178,12 @@ export const Links = () => {
             <a href="/business">
               Explore Business
             </a>
-            <HashLink to="/discord">Join Us</HashLink>
+            <a href="/discord" target="_blank">
+              Join us
+            </a>
           </div>
           <div className="footer-company-link flex-row">
-            <Link to={{ pathname: "/contact-us" }}>Contact Us</Link>
+            <Link to={{ pathname: "/contact-us" }}>Contact us</Link>
             <Link to={{ pathname: "/start-a-club" }}>Start a Club</Link>
           </div>
         </div>

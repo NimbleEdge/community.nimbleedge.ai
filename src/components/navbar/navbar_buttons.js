@@ -10,7 +10,7 @@ export const NavbarButtons = ({ activeButton, setActiveButton, pathname }) => {
         <NavbarButton
           id={1}
           active={pathname === "/about-us"}
-          buttonText={"About Us"}
+          buttonText={"About us"}
           setActive={setActiveButton}
           href="about-us"
         />
@@ -32,7 +32,7 @@ export const NavbarButtons = ({ activeButton, setActiveButton, pathname }) => {
         <NavbarButton
           id={4}
           active={routePath.hash === "#volunteer"}
-          buttonText={"Careers"}
+          buttonText={"Career"}
           setActive={setActiveButton}
           href="/careers"
           external={true}
@@ -40,7 +40,7 @@ export const NavbarButtons = ({ activeButton, setActiveButton, pathname }) => {
         <NavbarButton
           id={5}
           active={pathname === "/contact-us"}
-          buttonText={"Contact Us"}
+          buttonText={"Contact us"}
           setActive={setActiveButton}
           href="/contact-us"
         />

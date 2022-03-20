@@ -92,11 +92,11 @@ export const Logos = () => {
       </div>
       <div className="split-1">
         <Button1
-          text={"Sponsor Us"}
+          text={"Sponsor us"}
           href="https://forms.gle/rQEzdY9JRW6vb1nJ9"
         />
         <div className="flex-column">
-          <div className="footer-flow-us-text">Follow Us:</div>
+          <div className="footer-flow-us-text">Follow us:</div>
           <div className="footer-flow-us-icons-wrapper flex-row">
             <a
               href="https://twitter.com/NimbleedgeINC"

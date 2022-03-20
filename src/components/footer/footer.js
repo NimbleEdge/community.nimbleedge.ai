@@ -99,7 +99,7 @@ export default function Footer() {
             <span>&copy;</span>2021 Nimbleedge Inc. All rights reserved
           </div>
           <div className="flex-row">
-            With love by NimbleEdge Community <span>&#10084;</span>
+            With love by Nimbleedge Community <span>&#10084;</span>
           </div>
           <div className="flex-row">
             <a href="/" target="_blank">
@@ -114,7 +114,7 @@ export default function Footer() {
       ) : (
         <div className="footer-agreement-container-mobile">
           <div className="flex-row">
-            With love by NimbleEdge Community <span>&#10084;</span>
+            With love by Nimbleedge Community <span>&#10084;</span>
           </div>
           <div className="flex-row">
             <a href="/" target="_blank">
