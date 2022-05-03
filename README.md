@@ -19,6 +19,27 @@
     </p>
 </div>
 
+## Introduction
+
+[NimbleEdge ](https://www.nimbleedge.ai/) is leading the movement towards real edge computing. Creating a challenging new age technology altering the status quo between the cloud and the users’ devices, a technology that is inherently privacy preserving.
+
+We offer edge computing as a service to websites and mobile applications for ML workloads like training/running recommendations.
+
+And provide a smooth transition of compute from the cloud to the edge. With our SDK, users’ devices, like smartphones and laptops, decide in real-time whether to run a compute task locally or on the cloud.
+
+The [EnvisEdge software](https://github.com/NimbleEdge/EnvisEdge), is the tool to Deploy recommendation engines with Edge Computing.
+
+The Community website aims to serve a glimpse of nimbleedge projects and their work to the wider community. The website hosts projects, case studies, blogs, tutorials, and more developed by the wider nimbleedge community to help you better understand our work and hopefully learn from other's experiences.
+
+## Technology Stack
+
+We use a variety of technologies to build the web interface and support the community. They include:
+
+- [NodeJS](https://nodejs.org/)
+- [Yarn package manager](https://yarnpkg.com/)
+- [React](https://reactjs.org/)
+
+We use NodeJS and Yarn to install, test, and build the website. React is being utilized to build our custom component-based user interface to provide a modern look to the website.
 
 <!-- Intro -->
 
@@ -42,26 +63,64 @@ NimbleEdge/community.nimble.a
 └── package.json
 ```
 
-### Setup the repository to your local environment
+## Installation
 
-1. **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repository **[community.nimble.ai](https://github.com/NimbleEdge/community.nimbleedge.ai)**
+Before setting up the project make sure the LTS (Long Term Support) version of NodeJS is installed. We recommend using the Yarn package manager to install the project.
 
-2. **[Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)** the forked repository, using
-   ```
-    git clone https://github.com/{your-username}/community.nimbleedge.ai.git
-    ```
+1. Fork the [community.nimbleedge.ai repository](https://github.com/NimbleEdge/community.nimbleedge.ai).
+2. Clone the repository:
+  ```sh
+  git clone git@github.com:<USERNAME>/community.nimbleedge.ai.git && cd community.nimbleedge.ai
+  ```
+  Replace the `<USERNAME>` with your GitHub username. If you've already forked the repo, you'll want to ensure your fork is configured and that it's up to date. This will save you the headache of potential merge conflicts. To configure your fork:
+  ```sh
+  git remote add upstream https://github.com/NimbleEdge/community.nimbleedge.ai.git
+  ```
+  To sync your fork with the latest changes:
+  ```sh
+  git checkout main
+  git fetch upstream
+  git merge upstream/main
+  ```
+3. Move to website directory:
+  ```sh
+  cd community.nimbleedge.ai
+  ``` 
+4. Install the project:
+  ```sh
+  yarn or npm
+  ```
+5. Start the project:
+  ```sh
+  yarn start or npm start
+  ```
+6. Build the project:
+  ```sh
+  yarn build or npm build
+  ```
+7. Serve the project:
+  ```sh
+  yarn serve or npm serve
+  ```
 
-### Running Locally
+## How to Get Involved?
 
-1. Clone the repository
-2.  Install packages and dependencies, using ```npm install``` or ```yarn install```
-3. To run locally, use ```npm start``` or ```yarn start```     
+NimbleEdge welcomes contributions to the community website. If you have an idea for a new feature or a bug fix, please submit an issue or pull request. Our planned features can be found on our [Issue Tracker](https://github.com/NimbleEdge/community.nimbleedge.ai/issues).
 
-Visit **[http://localhost:3000](http:localhost:3000)** to view the app.
-
-## Interested in contributing  🎯
-1. **Star**, **fork** and **clone** the repo.
-2. Push your features or changes in your fork repo.
-3. Create a PR to **Nimble/community.nimble.ai**
 
 >  💬 For further queries or information, please reach out to us on **[Discord](https://nimbleedge.ai/discord)** <br>
+
+## 📌 Our valuable Contributors 👩‍💻👨‍💻 :
+
+<table>
+  <tr>
+    <a href="https://github.com/NimbleEdge/community.nimbleedge.ai/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=NimbleEdge/community.nimbleedge.ai" />
+    </a>
+  </tr>
+</table>
+
+
+## License
+
+This project is licensed under the [Apache License 2.0](https://github.com/NimbleEdge/community.nimbleedge.ai/blob/main/LICENSE).
