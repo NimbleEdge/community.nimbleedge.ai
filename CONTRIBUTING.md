@@ -5,7 +5,7 @@ We're so glad that you're thinking about contributing to NimbleEdge. We welcome 
 Here are some guidelines and instructions for contributing to our projects. Please go through them before making a contribution.
 
 ## Code of Conduct
-Open-Horizon governs its participants according to the Contributor [Code of Conduct](https://github.com/NimbleEdge/community.nimbleedge.ai/blob/main/CODE_OF_CONDUCT.md). As a contributor, you agree to uphold this code. 
+NimbleEdge governs its participants according to the Contributor [Code of Conduct](https://github.com/NimbleEdge/community.nimbleedge.ai/blob/main/CODE_OF_CONDUCT.md). As a contributor, you agree to uphold this code. 
 
 ## FAQ and General Questions
 
