@@ -172,7 +172,9 @@ export const Links = () => {
             <a href="https://forms.gle/QgnmAWvQKeq5gbau9" target="_blank">
               Partner with us
             </a>
-            <HashLink to="/#blogs">Blogs</HashLink>
+            <a href="https://blog.nimbleedge.ai" target="_blank">
+              Blogs
+            </a>
           </div>
           <div className="footer-company-link flex-row">
             <a href="/business">

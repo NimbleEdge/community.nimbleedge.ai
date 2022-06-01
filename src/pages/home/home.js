@@ -20,7 +20,6 @@ export default function Home() {
       <Visions />
       <Projects />
       <Volunteers />
-      <Blogs />
       <JoinUs />
       <Testimonials />
     </>
