@@ -6,10 +6,8 @@ import DIVYANSHU from "../../../assets/images/team/Divyanshu_.jpg";
 import RISHAB from "../../../assets/images/team/Rishab.jpg";
 import AHAMED from "../../../assets/images/team/Ahamed.png";
 import YASH from "../../../assets/images/team/YashVardhanSharma.jpg";
-import SOURAV from "../../../assets/images/team/sourav.png";
-import SHAISTHA from "../../../assets/images/team/Shaistha.jpg";
-import SAMEER from "../../../assets/images/team/Sameer.webp";
-import ADARSH from "../../../assets/images/team/adarsh.jpeg";
+
+
 
 export const data = [
   {
@@ -33,24 +31,9 @@ export const data = [
     image: RAMESHT,
   },
   {
-    name: "Sourav",
-    designation: "Community Manager",
-    image: SOURAV,
-  },
-  {
     name: "Ahamed",
     designation: "Infrastructure and DevOps",
     image: AHAMED,
-  },
-  {
-    name: "Shaistha",
-    designation: "Content Writer",
-    image: SHAISTHA,
-  },
-  {
-    name: "Adarsh",
-    designation: "Product Designer",
-    image: ADARSH,
   },
   {
     name: "Yash Vardhan",
@@ -61,10 +44,5 @@ export const data = [
     name: "Anubhav",
     designation: "Contributor",
     image: ANUBHAV,
-  },
-  {
-    name: "Sameer",
-    designation: "Contributor",
-    image: SAMEER,
-  },
+  }
 ];
