@@ -61,7 +61,7 @@ export const data = [
   },
   {
     name: "Deepali",
-    designation: "Generalist",
+    designation: "HR",
     image: DEEPALI,
   },
   {
