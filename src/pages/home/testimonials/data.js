@@ -1,4 +1,4 @@
-import DIVYANSHU from "../../../assets/images/team/Divyanshu_.jpg";
+import DIVYANSHU from "../../../assets/images/team/Divyanshu.jpg";
 import ARAVIND from "../../../assets/images/team/Aravind.jpeg";
 import HARISH from "../../../assets/images/team/Harish.jpeg";
 import HARSH from "../../../assets/images/team/Harsh.jpg";
